@@ -54,6 +54,44 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  gem 'rspec-rails'
+
+  # factory_bot_rails provides integration between factory_bot and rails 4.2 or newer
+  gem 'factory_bot_rails'
+
+  # prettier plugin for the Ruby programming language
+  gem 'prettier'
+
+  # An IRB alternative and runtime developer console
+  gem 'pry'
+
+  # Use Pry as your rails console
+  gem 'pry-rails'
+
+  # Automatic Ruby code style checking tool
+  gem 'rubocop', require: false
+
+  # Automatic Rails code style checking tool
+  gem 'rubocop-rails'
+
+  # A RuboCop extension for Faker
+  gem 'rubocop-faker'
+
+  # Rubocop extension for performance
+  gem 'rubocop-performance', require: false
+
+  # Add a comment summarizing to Models
+  gem 'annotate', require: false
+
+  # Swagger tooling for Rails API's
+  gem 'rswag-specs'
+
+  # Patch-level verification for bundler.
+  gem 'bundler-audit'
+
+  # Shim to load environment variables from .env into ENV in development.
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -66,4 +104,23 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+group :test do
+  # Strategies for cleaning databases. Can be used to ensure a clean state for testing
+  gem 'database_cleaner'
+
+  # Code coverage with automatic merging of coverage across test suites
+  gem 'simplecov'
+
+  # Show failing specs instantly
+  gem 'rspec-instafail'
+
+  # Shoulda Matchers provides RSpec one-liners to test common Rails functionality that, if written by hand, would be
+  # much longer, more complex, and error-prone.
+  gem 'shoulda-matchers'
+end
+
+# Swagger tooling for Rails API's
+gem 'rswag-api'
+gem 'rswag-ui'
 
